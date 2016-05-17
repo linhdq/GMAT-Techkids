@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import org.iliat.gmat.R;
 import org.iliat.gmat.dialog.DownloadImageDialog;
+import org.iliat.gmat.fragment.HomeFragment;
 import org.iliat.gmat.fragment.QuestionPackFragment;
 import org.iliat.gmat.interf.OnDownloadFinished;
 import org.iliat.gmat.interf.ScreenManager;
@@ -27,12 +28,12 @@ import org.iliat.gmat.utils.QuestionHelper;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
-    public class MainActivity extends AppCompatActivity
+    public class    MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ScreenManager {
 
-    FragmentManager mFragmentManager;
-    QuestionPackFragment questionPackFragment;
-
+        FragmentManager mFragmentManager;
+        QuestionPackFragment questionPackFragment;
+        HomeFragment homeFragment;
 
     public void goToActivity(Class activityClass, Bundle bundle){
         Intent intent = new Intent(this, activityClass);
@@ -61,9 +62,8 @@ import io.realm.RealmConfiguration;
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         getIntances();
-        questionPackFragment = new QuestionPackFragment();
-        questionPackFragment.setmContext(this);
-        openFragment(questionPackFragment, true);
+        homeFragment = new HomeFragment();
+        openFragment(homeFragment, true);
     }
 
     @Override
