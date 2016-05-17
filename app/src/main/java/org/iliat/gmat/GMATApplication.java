@@ -38,6 +38,7 @@ public class GMATApplication extends Application {
         //hello
         //Hello Hello Hello
         //hello nam
+        //good
         //Hello Linh
     }
 }
