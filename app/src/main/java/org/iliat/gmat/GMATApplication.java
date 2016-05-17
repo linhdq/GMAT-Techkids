@@ -32,5 +32,6 @@ public class GMATApplication extends Application {
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(getApplicationContext()).deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(realmConfig);
+        //hello
     }
 }
